@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Design_MusicApp.Views.SongPage"
+             xmlns:icon="clr-namespace:Design_MusicApp.Utils"
+             Shell.NavBarIsVisible="false">
+
+
+    <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto"
+          ColumnDefinitions="*,*,*,*,*,*,*,*,*"
+          ColumnSpacing="20"
+          Margin="20,20,20,50">
+
+
+        <Button Grid.Row="0" 
+                Grid.Column="0"
+                Grid.RowSpan="2"
+                BackgroundColor="Transparent"
+                Clicked="OnDownClicked">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Down}"
+                                 Size="25"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+
+        <Button Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="8"
+                BackgroundColor="Transparent">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Options}"
+                                 Size="25"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+
+        <Label Grid.Row="0"
+               Grid.Column="1"
+               Grid.ColumnSpan="7"
+               Text="PLAYING FROM PLAYLIST"
+               SemanticProperties.HeadingLevel="Level1"
+               FontSize="12.5"
+               TextColor="Gray"
+               HorizontalOptions="Center"
+               VerticalOptions="End" />
+
+        <Label Grid.Row="1"
+               Grid.Column="2"
+               Grid.ColumnSpan="5"
+               Text="Liked Songs"
+               SemanticProperties.HeadingLevel="Level1"
+               FontSize="15"
+               TextColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <Image Source="queen.jpg"
+               HorizontalOptions="Center"
+               Grid.Row="2"
+               Grid.ColumnSpan="9"
+               HeightRequest="330"
+               WidthRequest="330"
+               Margin="0,75" />
+
+        <Label Grid.Row="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="7"
+               Text="Queen"
+               SemanticProperties.HeadingLevel="Level1"
+               FontSize="16"
+               TextColor="White"
+               HorizontalOptions="Start"
+               VerticalOptions="End"
+               Margin="10,0" />
+
+        <Label Grid.Row="4"
+               Grid.Column="0"
+               Grid.ColumnSpan="8"
+               Text="Bohemian Rhapsody"
+               FontSize="15"
+               TextColor="Gray"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
+               Margin="10,0" />
+
+        <Button Grid.Row="3" 
+                Grid.RowSpan="2" 
+                Grid.Column="7" 
+                Grid.ColumnSpan="2" 
+                BackgroundColor="Transparent"
+                HorizontalOptions="End">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Heart}"
+                                 Size="25"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+
+        <ProgressBar Grid.Row="5"
+                     Grid.ColumnSpan="9"
+                     Progress="0.2"
+                     ProgressColor="Gray"
+                     Margin="10,20,10,0" />
+        <Label Text="0.66" 
+               Grid.Row="6" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2"
+               Margin="10,0,0,10"
+               TextColor="Gray"/>
+            
+        <Label Text="3.30" 
+               Grid.Row="6" 
+               Grid.Column="7" 
+               Grid.ColumnSpan="2"
+               Margin="0,0,10,10"
+               HorizontalOptions="End"
+               TextColor="Gray"/>
+
+        <Button Grid.Row="7"
+                Grid.Column="0"
+                Grid.RowSpan="2"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                Margin="25,0,0,0">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Ic2}"
+                                 Size="25"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+
+        <Button Grid.Row="7" 
+                Grid.RowSpan="2" 
+                Grid.Column="2" 
+                BackgroundColor="Transparent">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Backward}"
+                                 Size="23"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+        <Button Grid.Row="7"
+                Grid.Column="4"
+                Grid.RowSpan="2"
+                BackgroundColor="Transparent">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Pause1}"
+                                 Size="65"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+
+        <Button Grid.Row="7" Grid.RowSpan="2" Grid.Column="6" BackgroundColor="Transparent">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Forward}"
+                                 Size="25"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+        <Button Grid.Row="7"
+                Grid.Column="8"
+                Grid.RowSpan="2"
+                BackgroundColor="Transparent"
+                Margin="0,0,25,0">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Replay}"
+                                 Size="25"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+
+        <Button Grid.Row="9" 
+                Grid.Column="0" 
+                BackgroundColor="Transparent"
+                Margin="15,0,0,0">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Ic1}"
+                                 Size="20"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+        <Button Grid.Row="9" 
+                Grid.Column="7" 
+                BackgroundColor="Transparent"
+                Margin="0,0,30,0">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Share}"
+                                 Size="20"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+        <Button Grid.Row="9" 
+                Grid.Column="8"
+                BackgroundColor="Transparent"
+                Margin="0,0,15,0">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MOON"
+                                 Glyph="{x:Static icon:Iconfont.Ic3}"
+                                 Size="20"
+                                 Color="White" />
+            </Button.ImageSource>
+        </Button>
+        
+        
+    </Grid>
+
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#352344"
+                          Offset="0.1" />
+            <GradientStop Color="#09070A"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+</ContentPage>
